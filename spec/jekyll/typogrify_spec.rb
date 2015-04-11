@@ -31,5 +31,27 @@ describe(Jekyll) do
   
   it "wraps acronyms and initialism in span with the class caps" do
     expect(contents).to match /<span class="caps">SCUBA<\/span> is an acronym while <span class="caps">IBM<\/span> is an initialism/
+    expect(contents).to_not match /SCUBA is an acronym while IBM is an initialism/
+  end
+  
+  it "converts special characters (excluding HTML tags) to HTML entities" do
+    expect(contents).to match /<strong>&copy;<\/strong>/
+    expect(contents).to_not match /<strong>©<\/strong>/
+    expect(contents).to_not match /&lt;strong&gt;&copy;&lt;\/strong&gt;/
+  end
+  
+  it "wraps the first double/single quote in a span with the class dquo" do
+    expect(contents).to match /<span class="dquo">"<\/span>Call me Ishmael" he said./
+    expect(contents).to_not match /"Call me Ishmael" he said./
+  end
+  
+  it "will apply the smartypants filter" do
+    expect(contents).to match /Myles &#8220;The Great&#8221; Braithwaite/
+    expect(contents).to_not match /Myles "The Great" Braithwaite/
+  end
+  
+  it "will add a non-breaking-space between the last two words" do
+    expect(contents).to match /This is a rather long title and we don't want any widows or&nbsp;orphans./
+    expect(contents).to_not match /This is a rather long title and we don't want any widows or orphans./
   end
 end

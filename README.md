@@ -27,7 +27,9 @@ Or install it yourself as:
 Replaces space(s) before the last word (or tag before the last word) before an optional closing element (a, em, span, strong) before a closing tag (p, h[1-6], li, dt, dd) or the end of the string.
 
 ```html
-<h1>{{ page.title | widont }}</h1>
+<h1>{{ "This is a rather long title." | widont }}</h1>
+
+<h1>This is a rather long&nbsp;title.</h1>
 ```
 
 ## Development
