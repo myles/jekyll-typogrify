@@ -54,4 +54,9 @@ describe(Jekyll) do
     expect(contents).to match /This is a rather long title and we don't want any widows or&nbsp;orphans./
     expect(contents).to_not match /This is a rather long title and we don't want any widows or orphans./
   end
+  
+  it "runs all the filters" do
+    expect(contents).to match /<span class="quo">&#8216;<\/span>Neque porro quisquam&#8217; est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci&nbsp;velit&#8230;/
+    expect(contents).to_not match /'Neque porro quisquam' est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.../
+  end
 end
