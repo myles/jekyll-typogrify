@@ -23,4 +23,13 @@ describe(Jekyll) do
   it 'has a version number' do
     expect(Jekyll::Typogrify::VERSION).not_to be nil
   end
+  
+  it "wraps ampersands in span with the class amp" do
+    expect(contents).to match /This <span class="amp">&amp;<\/span> That/
+    expect(contents).to_not match /This & That/
+  end
+  
+  it "wraps acronyms and initialism in span with the class caps" do
+    expect(contents).to match /<span class="caps">SCUBA<\/span> is an acronym while <span class="caps">IBM<\/span> is an initialism/
+  end
 end
