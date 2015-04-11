@@ -2,6 +2,8 @@
 
 Improves typography on your Jekyll site using [typogruby](http://avdgaag.github.io/typogruby/).
 
+[![Build Status](https://travis-ci.org/myles/jekyll-typogrify.svg?branch=master)](https://travis-ci.org/myles/jekyll-typogrify)
+
 ## Installation
 
 Add this line to your application's Gemfile:
