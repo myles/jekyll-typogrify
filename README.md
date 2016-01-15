@@ -1,6 +1,6 @@
 # Jekyll::Typogrify
 
-Improves typography on your Jekyll site using [typogruby](http://avdgaag.github.io/typogruby/).
+Improves typography on your Jekyll site using [typogruby](http://avdgaag.github.io/typogruby/) and [titlecase](https://github.com/samsouder/titlecase).
 
 [![Build Status](https://travis-ci.org/myles/jekyll-typogrify.svg?branch=master)](https://travis-ci.org/myles/jekyll-typogrify) [![Gem Version](https://badge.fury.io/rb/jekyll-typogrify.svg)](http://badge.fury.io/rb/jekyll-typogrify)
 
