@@ -73,10 +73,10 @@ module Jekyll
     def widont(text)
       return Typogruby.widont(text)
     end
-		
-		def titlecase(text)
-			return text.titlecase
-		end
+    
+    def titlecase(text)
+      return text.titlecase
+    end
   end
 end
 
