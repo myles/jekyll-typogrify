@@ -96,6 +96,7 @@ Main function to do all the typogruby functions from the method.
 
 ```html
 <h1>{{ "Improve This Title" | improve }}</h1>
+```
 
 ## Development
 
