@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A Jekyll plugin that bring the functions of typogruby.}
   spec.description   = %q{A Jekyll plugin that bring the functions of typogruby.}
-  spec.homepage      = "https://github.com/myles/jekyll-typogrify"
+  spec.homepage      = "http://myles.github.io/jekyll-typogrify/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
