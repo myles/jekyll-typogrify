@@ -1,144 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Jekyll::Typogrify by myles</title>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Jekyll::Typogrify</h1>
-        <p>A Jekyll plugin that bring the functions of typogruby and titlecase.</p>
+  <title>Jekyll::Typogrify</title>
 
-        <p class="view"><a href="https://github.com/myles/jekyll-typogrify">View the Project on GitHub <small>myles/jekyll-typogrify</small></a></p>
+  <!-- Flatdoc -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/legacy.js'></script>
+  <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/flatdoc.js'></script>
 
+  <!-- Flatdoc theme -->
+  <link  href='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/theme-white/style.css' rel='stylesheet'>
+  <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/theme-white/script.js'></script>
 
-        <ul>
-          <li><a href="https://github.com/myles/jekyll-typogrify/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/myles/jekyll-typogrify/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/myles/jekyll-typogrify">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a id="jekylltypogrify" class="anchor" href="#jekylltypogrify" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jekyll::Typogrify</h1>
+  <!-- Meta -->
+  <meta content="Jekyll::Typogrify" property="og:title">
+  <meta content="A Jekyll plugin that bring the functions of typogruby." name="description">
 
-<p>Improves typography on your Jekyll site using <a href="http://avdgaag.github.io/typogruby/">typogruby</a> and <a href="https://github.com/samsouder/titlecase">titlecase</a>.</p>
+  <!-- Initializer -->
+  <script>
+    Flatdoc.run({
+      fetcher: Flatdoc.github('myles/jekyll-typogrify')
+    });
+  </script>
+</head>
+<body role='flatdoc'>
 
-<p><a href="https://travis-ci.org/myles/jekyll-typogrify"><img src="https://travis-ci.org/myles/jekyll-typogrify.svg?branch=master" alt="Build Status"></a> <a href="http://badge.fury.io/rb/jekyll-typogrify"><img src="https://badge.fury.io/rb/jekyll-typogrify.svg" alt="Gem Version"></a></p>
-
-<h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
-
-<p>Add this line to your application's Gemfile:</p>
-
-<div class="highlight highlight-source-ruby"><pre><span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>jekyll-typogrify<span class="pl-pds">'</span></span></pre></div>
-
-<p>And then execute:</p>
-
-<pre><code>$ bundle
-</code></pre>
-
-<p>Or install it yourself as:</p>
-
-<pre><code>$ gem install jekyll-typogrify
-</code></pre>
-
-<h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
-
-<h3>
-<a id="andpercent" class="anchor" href="#andpercent" aria-hidden="true"><span class="octicon octicon-link"></span></a>Andpercent</h3>
-
-<p>Converts an andpercent (ex. <code>&amp;</code>) converts a &amp; surrounded by optional whitespace or a non-breaking space to the HTML entity and surrounds it in a span with a styled class.</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">h1</span>&gt;{{ "Mr. <span class="pl-ii">&amp;</span> Mrs. Smith" | amp }}&lt;/<span class="pl-ent">h1</span>&gt;
-
-&lt;<span class="pl-ent">h1</span>&gt;Mr. &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>amp<span class="pl-pds">"</span></span>&gt;<span class="pl-c1">&amp;amp;</span>&lt;/<span class="pl-ent">span</span>&gt; Mrs. Smith&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
-
-<h3>
-<a id="capitalisation" class="anchor" href="#capitalisation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Capitalisation</h3>
-
-<p>Surrounds two or more consecutive capital letters, perhaps with interspersed digits and periods in a span with a styled class.</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">h1</span>&gt;{{ "A.B.C. Corp." | caps }}&lt;/<span class="pl-ent">h1</span>&gt;
-
-&lt;<span class="pl-ent">h1</span>&gt;&lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>caps<span class="pl-pds">"</span></span>&gt;A.B.C.&lt;/<span class="pl-ent">span</span>&gt; Corp.&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
-
-<h3>
-<a id="entities" class="anchor" href="#entities" aria-hidden="true"><span class="octicon octicon-link"></span></a>Entities</h3>
-
-<p>Converts special characters (excluding HTML tags) to HTML entities.</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">p</span>&gt;© Myles Braithwaite&lt;/<span class="pl-ent">p</span>&gt;
-
-&lt;<span class="pl-ent">p</span>&gt;<span class="pl-c1">&amp;copy;</span> Myles Braithwaite&lt;/<span class="pl-ent">p</span>&gt;</pre></div>
-
-<h3>
-<a id="initial-quotes" class="anchor" href="#initial-quotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initial Quotes</h3>
-
-<p>Encloses initial single or double quote, or their entities (optionally preceeded by a block element and perhaps an inline element) with a span that can be styled.</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">h1</span>&gt;{{ 'Myles "The Great" Braithwaite' | initial_quotes }}&lt;/<span class="pl-ent">h1</span>&gt;
-
-&lt;<span class="pl-ent">h1</span>&gt;Myles <span class="pl-c1">&amp;ldquo;</span>The Great<span class="pl-c1">&amp;rdquo;</span> Braithwaite&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
-
-<h3>
-<a id="smartypants" class="anchor" href="#smartypants" aria-hidden="true"><span class="octicon octicon-link"></span></a>Smartypants</h3>
-
-<p>Applies smartypants to a given piece of text.</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">p</span>&gt;{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas massa dui, hendrerit et neque ut, pretium vulputate felis. Aliquam vestibulum semper magna et eleifend. Proin erat elit, sagittis eu faucibus ornare, elementum eget lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus." | smartypants }}&lt;/<span class="pl-ent">p</span>&gt;</pre></div>
-
-<h3>
-<a id="widont" class="anchor" href="#widont" aria-hidden="true"><span class="octicon octicon-link"></span></a>Widont</h3>
-
-<p>Replaces space(s) before the last word (or tag before the last word) before an optional closing element (a, em, span, strong) before a closing tag (p, h[1-6], li, dt, dd) or the end of the string.</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">h1</span>&gt;{{ "This is a rather long title." | widont }}&lt;/<span class="pl-ent">h1</span>&gt;
-
-&lt;<span class="pl-ent">h1</span>&gt;This is a rather long<span class="pl-c1">&amp;nbsp;</span>title.&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
-
-<h3>
-<a id="titlecase" class="anchor" href="#titlecase" aria-hidden="true"><span class="octicon octicon-link"></span></a>Titlecase</h3>
-
-<p>Convert a given piece of text to titlecase.</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">h1</span>&gt;{{ "i love toronto" | titlecase }}&lt;/<span class="pl-ent">h1</span>&gt;
-
-&lt;<span class="pl-ent">h1</span>&gt;I Love Toronto&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
-
-<h3>
-<a id="improve" class="anchor" href="#improve" aria-hidden="true"><span class="octicon octicon-link"></span></a>Improve</h3>
-
-<p>Main function to do all the typogruby functions from the method.</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">h1</span>&gt;{{ "Improve This Title" | improve }}&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/myles">myles</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+  <div class='header'>
+    <div class='left'>
+      <h1>Jekyll::Typogrify</h1>
+      <ul>
+        <li><a href='https://github.com/myles/jekyll-typogrify'>View on GitHub</a></li>
+        <li><a href='https://github.com/myles/jekyll-typogrify/issues'>Issues</a></li>
+      </ul>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-1642439-37");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+    <div class='right'>
+      <!-- GitHub buttons: see http://ghbtns.com -->
+      <iframe src="http://ghbtns.com/github-btn.html?user=myles&amp;repo=jekyll-typogrify&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+    </div>
+  </div>
 
-  </body>
+  <div class='content-root'>
+    <div class='menubar'>
+      <div class='menu section' role='flatdoc-menu'></div>
+    </div>
+    <div role='flatdoc-content' class='content'></div>
+  </div>
+
+</body>
 </html>
