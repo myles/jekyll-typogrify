@@ -15,7 +15,7 @@ module Jekyll
       return Typogruby.amp(text)
     end
     
-    # surrounds two or more consecutive captial letters, perhaps with
+    # surrounds two or more consecutive capital letters, perhaps with
     # interspersed digits and periods in a span with a styled class.
     #
     # @param [String] text input text
@@ -74,6 +74,7 @@ module Jekyll
       return Typogruby.widont(text)
     end
     
+		# convert a given piece of text to titlecase
     def titlecase(text)
       return text.titlecase
     end

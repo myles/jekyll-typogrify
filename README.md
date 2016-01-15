@@ -22,6 +22,54 @@ Or install it yourself as:
 
 ## Usage
 
+### Andpercent
+
+Converts an andpercent (ex. `&`) converts a & surrounded by optional whitespace or a non-breaking space to the HTML entity and surrounds it in a span with a styled class.
+
+```html
+<h1>{{ "Mr. & Mrs. Smith" | amp }}</h1>
+
+<h1>Mr. <span class="amp">&amp;</span> Mrs. Smith</h1>
+```
+
+### Capitalisation
+
+Surrounds two or more consecutive capital letters, perhaps with interspersed digits and periods in a span with a styled class.
+
+```html
+<h1>{{ "A.B.C. Corp." | caps }}</h1>
+
+<h1><span class="caps">A.B.C.</span> Corp.</h1>
+```
+
+### Entities
+
+Converts special characters (excluding HTML tags) to HTML entities.
+
+```html
+<p>© Myles Braithwaite</p>
+
+<p>&copy; Myles Braithwaite</p>
+```
+
+### Initial Quotes
+
+Encloses initial single or double quote, or their entities (optionally preceeded by a block element and perhaps an inline element) with a span that can be styled.
+
+```html
+<h1>{{ 'Myles "The Great" Braithwaite' | initial_quotes }}</h1>
+
+<h1>Myles &ldquo;The Great&rdquo; Braithwaite</h1>
+```
+
+### Smartypants
+
+Applies smartypants to a given piece of text.
+
+```html
+<p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas massa dui, hendrerit et neque ut, pretium vulputate felis. Aliquam vestibulum semper magna et eleifend. Proin erat elit, sagittis eu faucibus ornare, elementum eget lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus." | smartypants }}</p>
+```
+
 ### Widont
 
 Replaces space(s) before the last word (or tag before the last word) before an optional closing element (a, em, span, strong) before a closing tag (p, h[1-6], li, dt, dd) or the end of the string.
@@ -31,6 +79,23 @@ Replaces space(s) before the last word (or tag before the last word) before an o
 
 <h1>This is a rather long&nbsp;title.</h1>
 ```
+
+### Titlecase
+
+Convert a given piece of text to titlecase.
+
+```html
+<h1>{{ "i love toronto" | titlecase }}</h1>
+
+<h1>I Love Toronto</h1>
+```
+
+### Improve
+
+Main function to do all the typogruby functions from the method.
+
+```html
+<h1>{{ "Improve This Title" | improve }}</h1>
 
 ## Development
 
