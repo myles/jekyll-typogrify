@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Jekyll::Typogrify by Myles Braithwaite</title>
+    <title>Jekyll::Typogrify by myles</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
@@ -16,7 +16,7 @@
     <div class="wrapper">
       <header>
         <h1>Jekyll::Typogrify</h1>
-        <p>A Jekyll plugin that bring the functions of typogruby.</p>
+        <p>A Jekyll plugin that bring the functions of typogruby and titlecase.</p>
 
         <p class="view"><a href="https://github.com/myles/jekyll-typogrify">View the Project on GitHub <small>myles/jekyll-typogrify</small></a></p>
 
@@ -56,15 +56,6 @@
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <h3>
-<a id="widont" class="anchor" href="#widont" aria-hidden="true"><span class="octicon octicon-link"></span></a>Widont</h3>
-
-<p>Replaces space(s) before the last word (or tag before the last word) before an optional closing element (a, em, span, strong) before a closing tag (p, h[1-6], li, dt, dd) or the end of the string.</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">h1</span>&gt;{{ "This is a rather long title." | widont }}&lt;/<span class="pl-ent">h1</span>&gt;
-
-&lt;<span class="pl-ent">h1</span>&gt;This is a rather long<span class="pl-c1">&amp;nbsp;</span>title.&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
-
-<h3>
 <a id="andpercent" class="anchor" href="#andpercent" aria-hidden="true"><span class="octicon octicon-link"></span></a>Andpercent</h3>
 
 <p>Converts an andpercent (ex. <code>&amp;</code>) converts a &amp; surrounded by optional whitespace or a non-breaking space to the HTML entity and surrounds it in a span with a styled class.</p>
@@ -72,9 +63,68 @@
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">h1</span>&gt;{{ "Mr. <span class="pl-ii">&amp;</span> Mrs. Smith" | amp }}&lt;/<span class="pl-ent">h1</span>&gt;
 
 &lt;<span class="pl-ent">h1</span>&gt;Mr. &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>amp<span class="pl-pds">"</span></span>&gt;<span class="pl-c1">&amp;amp;</span>&lt;/<span class="pl-ent">span</span>&gt; Mrs. Smith&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
+
+<h3>
+<a id="capitalisation" class="anchor" href="#capitalisation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Capitalisation</h3>
+
+<p>Surrounds two or more consecutive capital letters, perhaps with interspersed digits and periods in a span with a styled class.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">h1</span>&gt;{{ "A.B.C. Corp." | caps }}&lt;/<span class="pl-ent">h1</span>&gt;
+
+&lt;<span class="pl-ent">h1</span>&gt;&lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>caps<span class="pl-pds">"</span></span>&gt;A.B.C.&lt;/<span class="pl-ent">span</span>&gt; Corp.&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
+
+<h3>
+<a id="entities" class="anchor" href="#entities" aria-hidden="true"><span class="octicon octicon-link"></span></a>Entities</h3>
+
+<p>Converts special characters (excluding HTML tags) to HTML entities.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">p</span>&gt;© Myles Braithwaite&lt;/<span class="pl-ent">p</span>&gt;
+
+&lt;<span class="pl-ent">p</span>&gt;<span class="pl-c1">&amp;copy;</span> Myles Braithwaite&lt;/<span class="pl-ent">p</span>&gt;</pre></div>
+
+<h3>
+<a id="initial-quotes" class="anchor" href="#initial-quotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initial Quotes</h3>
+
+<p>Encloses initial single or double quote, or their entities (optionally preceeded by a block element and perhaps an inline element) with a span that can be styled.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">h1</span>&gt;{{ 'Myles "The Great" Braithwaite' | initial_quotes }}&lt;/<span class="pl-ent">h1</span>&gt;
+
+&lt;<span class="pl-ent">h1</span>&gt;Myles <span class="pl-c1">&amp;ldquo;</span>The Great<span class="pl-c1">&amp;rdquo;</span> Braithwaite&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
+
+<h3>
+<a id="smartypants" class="anchor" href="#smartypants" aria-hidden="true"><span class="octicon octicon-link"></span></a>Smartypants</h3>
+
+<p>Applies smartypants to a given piece of text.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">p</span>&gt;{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas massa dui, hendrerit et neque ut, pretium vulputate felis. Aliquam vestibulum semper magna et eleifend. Proin erat elit, sagittis eu faucibus ornare, elementum eget lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus." | smartypants }}&lt;/<span class="pl-ent">p</span>&gt;
+
+### Widont
+
+Replaces space(s) before the last word (or tag before the last word) before an optional closing element (a, em, span, strong) before a closing tag (p, h[1-6], li, dt, dd) or the end of the string.
+
+```html
+&lt;<span class="pl-ent">h1</span>&gt;{{ "This is a rather long title." | widont }}&lt;/<span class="pl-ent">h1</span>&gt;
+
+&lt;<span class="pl-ent">h1</span>&gt;This is a rather long<span class="pl-c1">&amp;nbsp;</span>title.&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
+
+<h3>
+<a id="titlecase" class="anchor" href="#titlecase" aria-hidden="true"><span class="octicon octicon-link"></span></a>Titlecase</h3>
+
+<p>Convert a given piece of text to titlecase.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">h1</span>&gt;{{ "i love toronto" | titlecase }}&lt;/<span class="pl-ent">h1</span>&gt;
+
+&lt;<span class="pl-ent">h1</span>&gt;I Love Toronto&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
+
+<h3>
+<a id="improve" class="anchor" href="#improve" aria-hidden="true"><span class="octicon octicon-link"></span></a>Improve</h3>
+
+<p>Main function to do all the typogruby functions from the method.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">h1</span>&gt;{{ "Improve This Title" | improve }}&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
       </section>
       <footer>
-        <p>This project is maintained by <a href="https://github.com/myles">Myles Braithwaite</a></p>
+        <p>This project is maintained by <a href="https://github.com/myles">myles</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
