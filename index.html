@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jekyll-typogrify by myles</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Jekyll-typogrify</h1>
+        <p>A Jekyll plugin that bring the functions of typogruby.</p>
+
+        <p class="view"><a href="https://github.com/myles/jekyll-typogrify">View the Project on GitHub <small>myles/jekyll-typogrify</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/myles/jekyll-typogrify/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/myles/jekyll-typogrify/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/myles/jekyll-typogrify">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="jekylltypogrify" class="anchor" href="#jekylltypogrify" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jekyll::Typogrify</h1>
+
+<p>Improves typography on your Jekyll site using <a href="http://avdgaag.github.io/typogruby/">typogruby</a> and <a href="https://github.com/samsouder/titlecase">titlecase</a>.</p>
+
+<p><a href="https://travis-ci.org/myles/jekyll-typogrify"><img src="https://travis-ci.org/myles/jekyll-typogrify.svg?branch=master" alt="Build Status"></a> <a href="http://badge.fury.io/rb/jekyll-typogrify"><img src="https://badge.fury.io/rb/jekyll-typogrify.svg" alt="Gem Version"></a></p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>jekyll-typogrify<span class="pl-pds">'</span></span></pre></div>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install jekyll-typogrify
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a id="widont" class="anchor" href="#widont" aria-hidden="true"><span class="octicon octicon-link"></span></a>Widont</h3>
+
+<p>Replaces space(s) before the last word (or tag before the last word) before an optional closing element (a, em, span, strong) before a closing tag (p, h[1-6], li, dt, dd) or the end of the string.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">h1</span>&gt;{{ "This is a rather long title." | widont }}&lt;/<span class="pl-ent">h1</span>&gt;
+
+&lt;<span class="pl-ent">h1</span>&gt;This is a rather long<span class="pl-c1">&amp;nbsp;</span>title.&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
+
+<h3>
+<a id="andpercent" class="anchor" href="#andpercent" aria-hidden="true"><span class="octicon octicon-link"></span></a>Andpercent</h3>
+
+<p>Converts an andpercent (ex. <code>&amp;</code>) converts a &amp; surrounded by optional whitespace or a non-breaking space to the HTML entity and surrounds it in a span with a styled class.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">h1</span>&gt;{{ "Mr. <span class="pl-ii">&amp;</span> Mrs. Smith" | amp }}&lt;/<span class="pl-ent">h1</span>&gt;
+
+&lt;<span class="pl-ent">h1</span>&gt;Mr. &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>amp<span class="pl-pds">"</span></span>&gt;<span class="pl-c1">&amp;amp;</span>&lt;/<span class="pl-ent">span</span>&gt; Mrs. Smith&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/myles">myles</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-1642439-37");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
