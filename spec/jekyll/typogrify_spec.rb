@@ -59,4 +59,8 @@ describe(Jekyll) do
     expect(contents).to match /<span class="quo">&#8216;<\/span>Neque porro quisquam&#8217; est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci&nbsp;velit&#8230;/
     expect(contents).to_not match /'Neque porro quisquam' est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.../
   end
+
+  it "run improve on a couple of emojis" do
+    expect(contents).to_not match /🤖s Fighting 🐵s/
+  end
 end
