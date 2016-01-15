@@ -62,5 +62,11 @@ describe(Jekyll) do
 
   it "run improve on a couple of emojis" do
     expect(contents).to_not match /🤖s Fighting 🐵s/
+		expect(contents).to match /🤖s Fighting&nbsp;🐵s/
   end
+	
+	it "will apply the titlecase filter" do
+		expect(contents).to_not match /welcome to beautiful 東京都 (tokyo), japan/
+		# expect(contents).to match /Welcome to Beautiful 東京都 (Tokyo), Japan/
+	end
 end

@@ -1,6 +1,7 @@
 require "jekyll/typogrify/version"
 
 require 'typogruby'
+require 'titlecase'
 require 'liquid'
 
 module Jekyll
@@ -72,6 +73,10 @@ module Jekyll
     def widont(text)
       return Typogruby.widont(text)
     end
+		
+		def titlecase(text)
+			return text.titlecase
+		end
   end
 end
 
