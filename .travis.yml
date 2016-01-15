@@ -1,8 +1,3 @@
 language: ruby
 rvm:
   - 2.0.0
-before_install:
-  - gem install package_cloud
-script:
-  - bundle exec rake build
-  - package_cloud push myles/jekyll-typogrify pkg/jekyll-typogrify-*.gem
