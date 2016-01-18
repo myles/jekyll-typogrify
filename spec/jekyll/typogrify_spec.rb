@@ -69,4 +69,14 @@ describe(Jekyll) do
 		expect(contents).to_not match /welcome to beautiful 東京都 (tokyo), japan/
 		# expect(contents).to match /Welcome to Beautiful 東京都 (Tokyo), Japan/
 	end
+	
+	it "test filter from a page variable" do
+		expect(contents).to_not match /this is the page title/
+		expect(contents).to match /This Is the Page&nbsp;Title/
+	end
+	
+	it "test filter from an assign variable" do
+		expect(contents).to_not match /this is an assigned value/
+		expect(contents).to match /This Is an Assigned&nbsp;Value/
+	end
 end
