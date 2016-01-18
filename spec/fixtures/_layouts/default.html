@@ -1,25 +1,29 @@
 ---
 ---
-<p>{{ "This & That" | amp }}</p>
+<p class="test-amp">{{ "This & That" | amp }}</p>
 
-<p>{{ "SCUBA is an acronym while IBM is an initialism" | caps }}</p>
+<p class="test-caps">{{ "SCUBA is an acronym while IBM is an initialism" | caps }}</p>
 
-<p>{{ "<strong>©</strong>" | entities }}</p>
+<p class="test-entities">{{ "<strong>©</strong>" | entities }}</p>
 
-<p>{{ '"Call me Ishmael" he said.' | initial_quotes }}</p>
+<p class="test-initial_quotes">{{ '"Call me Ishmael" he said.' | initial_quotes }}</p>
 
-<p>{{ 'Myles "The Great" Braithwaite' | smartypants }}</p>
+<p class="test-smartypants">{{ 'Myles "The Great" Braithwaite' | smartypants }}</p>
 
-<p>{{ "This is a rather long title and we don't want any widows or orphans." | widont }}</p>
+<p class="test-widont">{{ "This is a rather long title and we don't want any widows or orphans." | widont }}</p>
 
-<p>{{ "'Neque porro quisquam' est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." | improve }}</p>
+<p class="test-improve">{{ "'Neque porro quisquam' est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." | improve }}</p>
 
-<p>{{ "🤖s Fighting 🐵s" | improve }}</p>
+<p class="test-emoji">{{ "🤖s Fighting 🐵s" | improve }}</p>
 
-<p>{{ "welcome to beautiful 東京都 (tokyo), japan" | titlecase }}</p>
+<p class="test-titlecase">{{ "welcome to beautiful 東京都 (tokyo), japan" | titlecase }}</p>
 
-<p>{{ page.title | titlecase | improve }}</p>
+<p class="test-two-filters">{{ page.title | titlecase | improve }}</p>
 
-{% assign assign_value = 'this is an assigned value' %}
+<p class="test-assigned-variable">{% assign assign_value = 'this is an assigned value' %}{{ assign_value | titlecase | improve }}</p>
 
-<p>{{ assign_value | titlecase | improve }}</p>
+<p class="test-nil-value">{{ post.nil | improve | titlecase }}</p>
+
+<p class="test-variable-does-not-exist">{{ post.doesntexist | improve | titlecase }}</p>
+
+<p class="test-empty-value">{{ post.empty | improve | titlecase }}</p>

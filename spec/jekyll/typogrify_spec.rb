@@ -25,8 +25,8 @@ describe(Jekyll) do
   end
   
   it "wraps ampersands in span with the class amp" do
-    expect(contents).to match /This <span class="amp">&amp;<\/span> That/
-    expect(contents).to_not match /This & That/
+    expect(contents).to match /<p class="test-amp">This <span class="amp">&amp;<\/span> That<\/p>/
+    expect(contents).to_not match /<p class="test-amp">This & That<\/p>/
   end
   
   it "wraps acronyms and initialism in span with the class caps" do
@@ -78,5 +78,17 @@ describe(Jekyll) do
 	it "test filter from an assign variable" do
 		expect(contents).to_not match /this is an assigned value/
 		expect(contents).to match /This Is an Assigned&nbsp;Value/
+	end
+
+	it "nothing should happen with nil" do
+		expect(contents).to match /<p class="test-nil-value"><\/p>/
+	end
+
+	it "nothing should happen if hte variable doesn't exist" do
+		expect(contents).to match /<p class="test-variable-does-not-exist"><\/p>/
+	end
+
+	it "if the value is empty it should return nothing" do
+		expect(contents).to match /<p class="test-empty-value"><\/p>/
 	end
 end
