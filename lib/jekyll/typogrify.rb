@@ -12,7 +12,7 @@ module Jekyll
     # @param [String] text input text
     # @return [String] input text with ampersands wrapped
     def amp(text)
-      return Typogruby.amp(text)
+      return Typogruby.amp(text.to_s)
     end
     
     # surrounds two or more consecutive capital letters, perhaps with
@@ -21,7 +21,7 @@ module Jekyll
     # @param [String] text input text
     # @return [String] input text with caps wrapped
     def caps(text)
-      return Typogruby.caps(text)
+      return Typogruby.caps(text.to_s)
     end
     
     # Converts special characters (excluding HTML tags) to HTML entities.
@@ -30,7 +30,7 @@ module Jekyll
     # @return [String] input text with all special characters converted to
     #   HTML entities.
     def entities(text)
-      return Typogruby.entities(text)
+      return Typogruby.entities(text.to_s)
     end
     
     # main function to do all the functions from the method.
@@ -38,7 +38,7 @@ module Jekyll
     # @param [String] text input text
     # @return [String] input text with all filters applied
     def improve(text)
-      return Typogruby.improve(text)
+      return Typogruby.improve(text.to_s)
     end
     
     # encloses initial single or double quote, or their entities
@@ -49,7 +49,7 @@ module Jekyll
     # @return [String] input text with initial quotes wrapped
     
     def initial_quotes(text)
-      return Typogruby.initial_quotes(text)
+      return Typogruby.initial_quotes(text.to_s)
     end
     
     # Applies smartypants to a given piece of text
@@ -58,7 +58,7 @@ module Jekyll
     # @param [String] text input text
     # @return [String] input text with smartypants applied
     def smartypants(text)
-      return Typogruby.smartypants(text)
+      return Typogruby.smartypants(text.to_s)
     end
     
     # replaces space(s) before the last word (or tag before the last word)
@@ -71,12 +71,12 @@ module Jekyll
     # @param [String] text input text
     # @return [String] input text with non-breaking spaces inserted
     def widont(text)
-      return Typogruby.widont(text)
+      return Typogruby.widont(text.to_s)
     end
     
 		# convert a given piece of text to titlecase
     def titlecase(text)
-      return text.titlecase
+      return text.to_s.titlecase
     end
   end
 end

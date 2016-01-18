@@ -2,7 +2,7 @@
 
 Improves typography on your Jekyll site using [typogruby](http://avdgaag.github.io/typogruby/) and [titlecase](https://github.com/samsouder/titlecase).
 
-[![Build Status](https://travis-ci.org/myles/jekyll-typogrify.svg?branch=master)](https://travis-ci.org/myles/jekyll-typogrify) [![Gem Version](https://badge.fury.io/rb/jekyll-typogrify.svg)](http://badge.fury.io/rb/jekyll-typogrify)
+[![Build Status](https://travis-ci.org/myles/jekyll-typogrify.svg?branch=master)](https://travis-ci.org/myles/jekyll-typogrify) [![Gem Version](https://badge.fury.io/rb/jekyll-typogrify.svg)](http://badge.fury.io/rb/jekyll-typogrify) [![Code Issues](https://www.quantifiedcode.com/api/v1/project/e017e34c1f35482e87e0ea12390ef7cc/badge.svg)](https://www.quantifiedcode.com/app/project/e017e34c1f35482e87e0ea12390ef7cc)
 
 ## Installation
 
