@@ -20,6 +20,13 @@ Or install it yourself as:
 
     $ gem install jekyll-typogrify
 
+You now need to enable the plugin in your Jekyll web site. Append it to the `gems` array in your `_config.yml` file:
+
+```yaml
+gems:
+- jekyll-typogrify
+```
+
 ## Usage
 
 ### Andpercent
