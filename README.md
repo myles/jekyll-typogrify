@@ -8,8 +8,6 @@ Improves typography on your Jekyll site using [typogruby](http://avdgaag.github.
 | ------ | ----- |
 | ![Before](https://raw.githubusercontent.com/myles/jekyll-typogrify/master/screenshots/before.png) | ![After](https://raw.githubusercontent.com/myles/jekyll-typogrify/master/screenshots/after.png) |
 
-<img src="https://raw.githubusercontent.com/myles/jekyll-typogrify/master/screenshots/before.png" alt="Before" width="45%"> <img src="https://raw.githubusercontent.com/myles/jekyll-typogrify/master/screenshots/after.png" alt="After" width="45%">
-
 ## Installation
 
 Add this line to your application's Gemfile:
