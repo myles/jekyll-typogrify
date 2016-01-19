@@ -12,10 +12,10 @@ Set up your machine:
 
 Make sure the tests pass
 
-	bundle exec rake
+	./bin/test
 
 Make your change. Add tests for your change. Make the tests pass:
 
-	bundle exec rake
+	./bin/test
 
 Push to your fork and [submit a pull request](https://github.com/myles/jekyll-typogrify/compare/).
