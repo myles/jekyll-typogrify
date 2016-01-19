@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+bundle exec jekyll serve --config ./spec/fixtures/_config.yml -d ./spec/dest -s ./spec/fixtures/ --watch

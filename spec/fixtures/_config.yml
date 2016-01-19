@@ -1,9 +1,12 @@
 timezone: UTC
 
+gems:
+- jekyll-typogrify
+
 defaults:
   -
     scope:
       path: ""
-      type: page
+      type: pages
     values:
       layout: default
