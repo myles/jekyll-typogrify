@@ -74,7 +74,10 @@ module Jekyll
       return Typogruby.widont(text.to_s)
     end
     
-		# convert a given piece of text to titlecase
+    # convert a given piece of text to titlecase
+    #
+    # @param [String] text input text
+    # @return [String] input text convert to titlecase
     def titlecase(text)
       return text.to_s.titlecase
     end
