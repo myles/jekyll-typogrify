@@ -68,9 +68,9 @@ Converts special characters (excluding HTML tags) to HTML entities.
 Encloses initial single or double quote, or their entities (optionally preceeded by a block element and perhaps an inline element) with a span that can be styled.
 
 ```html
-<h1>{{ 'Myles "The Great" Braithwaite' | initial_quotes }}</h1>
+<h1>{{ '"Do not cry because it is over, simile because it happened."' | initial_quotes }}</h1>
 
-<h1>Myles &ldquo;The Great&rdquo; Braithwaite</h1>
+<h1><span class="dquo">"</span>Do not cry because it is over, simile because it happened."</h1>
 ```
 
 ### Smartypants
@@ -78,7 +78,9 @@ Encloses initial single or double quote, or their entities (optionally preceeded
 Applies smartypants to a given piece of text.
 
 ```html
-<p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas massa dui, hendrerit et neque ut, pretium vulputate felis. Aliquam vestibulum semper magna et eleifend. Proin erat elit, sagittis eu faucibus ornare, elementum eget lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus." | smartypants }}</p>
+<p>{{ "Today I'm going to the... coffeeshop." | smartypants }}</p>
+
+<p>Today I&#8217;m going to the&#8230; coffeeshop.</p>
 ```
 
 ### Widont
