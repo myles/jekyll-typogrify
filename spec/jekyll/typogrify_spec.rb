@@ -59,36 +59,36 @@ describe(Jekyll) do
     expect(contents).to match /<span class="quo">&#8216;<\/span>Neque porro quisquam&#8217; est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci&nbsp;velit&#8230;/
     expect(contents).to_not match /'Neque porro quisquam' est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.../
   end
-
+  
   it "run improve on a couple of emojis" do
     expect(contents).to_not match /🤖s Fighting 🐵s/
-		expect(contents).to match /🤖s Fighting&nbsp;🐵s/
+    expect(contents).to match /🤖s Fighting&nbsp;🐵s/
   end
-	
-	it "will apply the titlecase filter" do
-		expect(contents).to_not match /welcome to beautiful 東京都 (tokyo), japan/
-		# expect(contents).to match /Welcome to Beautiful 東京都 (Tokyo), Japan/
-	end
-	
-	it "test filter from a page variable" do
-		expect(contents).to_not match /this is the page title/
-		expect(contents).to match /This Is the Page&nbsp;Title/
-	end
-	
-	it "test filter from an assign variable" do
-		expect(contents).to_not match /this is an assigned value/
-		expect(contents).to match /This Is an Assigned&nbsp;Value/
-	end
-
-	it "nothing should happen with nil" do
-		expect(contents).to match /<p class="test-nil-value"><\/p>/
-	end
-
-	it "nothing should happen if hte variable doesn't exist" do
-		expect(contents).to match /<p class="test-variable-does-not-exist"><\/p>/
-	end
-
-	it "if the value is empty it should return nothing" do
-		expect(contents).to match /<p class="test-empty-value"><\/p>/
-	end
+  
+  it "will apply the titlecase filter" do
+    expect(contents).to_not match /welcome to beautiful 東京都 (tokyo), japan/
+    # expect(contents).to match /Welcome to Beautiful 東京都 (Tokyo), Japan/
+  end
+  
+  it "test filter from a page variable" do
+    expect(contents).to_not match /this is the page title/
+    expect(contents).to match /This Is the Page&nbsp;Title/
+  end
+  
+  it "test filter from an assign variable" do
+    expect(contents).to_not match /this is an assigned value/
+    expect(contents).to match /This Is an Assigned&nbsp;Value/
+  end
+  
+  it "nothing should happen with nil" do
+    expect(contents).to match /<p class="test-nil-value"><\/p>/
+  end
+  
+  it "nothing should happen if hte variable doesn't exist" do
+    expect(contents).to match /<p class="test-variable-does-not-exist"><\/p>/
+  end
+  
+  it "if the value is empty it should return nothing" do
+    expect(contents).to match /<p class="test-empty-value"><\/p>/
+  end
 end
