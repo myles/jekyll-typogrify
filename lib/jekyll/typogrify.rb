@@ -87,7 +87,7 @@ module Jekyll
     # @param [String] text input text
     # @return [String] input text with words that look strange in a span
     def letter_spacing(text)
-      text.gsub(/(click|clint|final|curt|flicks|flick|clicks|flickering)/im) { |str|
+      text.gsub(/(click\S*|clint\S*|final\S*|curt\S*|flick\S*)\b/im) { |str|
         tag, before, word = $1, $2, $3
         "#{before}<span class=\"fix-letter-spacing\">#{str}</span>"
       }
