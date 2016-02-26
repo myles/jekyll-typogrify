@@ -81,6 +81,17 @@ module Jekyll
     def titlecase(text)
       return text.to_s.titlecase
     end
+    
+    # wraps words in a span class that can look like something else
+    #
+    # @param [String] text input text
+    # @return [String] input text with words that look strange in a span
+    def letter_spacing(text)
+      text.gsub(/(click|clint|final|curt|flicks|flick|clicks|flickering)/im) { |str|
+        tag, before, word = $1, $2, $3
+        "#{before}<span class=\"fix-letter-spacing\">#{str}</span>"
+      }
+    end
   end
 end
 

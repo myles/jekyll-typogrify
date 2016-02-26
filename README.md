@@ -111,6 +111,16 @@ Main function to do all the typogruby functions from the method.
 <h1>{{ "Improve This Title" | improve }}</h1>
 ```
 
+### Letter Spacing
+
+Let's make sure click doesn't look like dick.
+
+```html
+<p>{{ "There’s more to love with every click." | letter_spacing }}</p>
+
+<p>There’s more to love with every <span class="fix-letter-spacing">click</p>.</p>
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.

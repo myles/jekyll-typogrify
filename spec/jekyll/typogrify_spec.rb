@@ -91,4 +91,9 @@ describe(Jekyll) do
   it "if the value is empty it should return nothing" do
     expect(contents).to match /<p class="test-empty-value"><\/p>/
   end
+  
+  it "test the letter spacing filter" do
+    expect(contents).to_not match /<p class="test-letter-spacing">Click, Clint, and Flick.<\/p>/
+    expect(contents).to match /<p class="test-letter-spacing"><span class="fix-letter-spacing">Click<\/span>, <span class="fix-letter-spacing">Clint<\/span>, and <span class="fix-letter-spacing">Flick<\/span>.<\/p>/
+  end
 end
