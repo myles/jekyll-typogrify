@@ -93,7 +93,7 @@ describe(Jekyll) do
   end
   
   it "test the letter spacing filter" do
-    expect(contents).to_not match /<p class="test-letter-spacing">Click, Clint, and Flick.<\/p>/
-    expect(contents).to match /<p class="test-letter-spacing"><span class="fix-letter-spacing">Click<\/span>, <span class="fix-letter-spacing">Clint<\/span>, and <span class="fix-letter-spacing">Flick<\/span>.<\/p>/
+    expect(contents).to_not match /<p class="test-letter-spacing">Click, Clint's, and Flick.<\/p>/
+    expect(contents).to match /<p class="test-letter-spacing"><span class="fix-letter-spacing">Click<\/span>, <span class="fix-letter-spacing">Clint's<\/span>, and <span class="fix-letter-spacing">Flick<\/span>.<\/p>/
   end
 end
