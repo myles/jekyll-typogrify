@@ -33,9 +33,9 @@ gems:
 
 ## Usage
 
-### Andpercent
+### Ampersand
 
-Converts an andpercent (ex. `&`) converts a & surrounded by optional whitespace or a non-breaking space to the HTML entity and surrounds it in a span with a styled class.
+Converts an ampersand (ex. `&`) converts a & surrounded by optional whitespace or a non-breaking space to the HTML entity and surrounds it in a span with a styled class.
 
 ```html
 <h1>{{ "Mr. & Mrs. Smith" | amp }}</h1>
