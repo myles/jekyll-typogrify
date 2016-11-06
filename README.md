@@ -6,7 +6,7 @@
 
 # Jekyll::Typogrify
 
-Improves typography on your Jekyll site using [typogruby](http://avdgaag.github.io/typogruby/) and [titlecase](https://github.com/samsouder/titlecase).
+Improves typography on your Jekyll site using [typogruby](http://avdgaag.github.io/typogruby/), [titlecase](https://github.com/samsouder/titlecase), and some other useful functions.
 
 | Before | After |
 | ------ | ----- |
