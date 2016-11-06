@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/myles/jekyll-typogrify.svg?branch=master)](https://travis-ci.org/myles/jekyll-typogrify)
-[![Build Status](https://ci.appveyor.com/api/projects/status/bw6g4akc9x8g1x33/branch/master?svg=true)](https://ci.appveyor.com/project/MylesBraithwaite/jekyll-typogrify/branch/master)
+[![Build Status](https://travis-ci.org/myles/jekyll-typogrify.svg?branch=v0.3.1)](https://travis-ci.org/myles/jekyll-typogrify)
+[![Build Status](https://ci.appveyor.com/api/projects/status/bw6g4akc9x8g1x33/branch/master?svg=true)](https://ci.appveyor.com/project/MylesBraithwaite/jekyll-typogrify/branch/v0.3.1)
 [![Gem Version](https://badge.fury.io/rb/jekyll-typogrify.svg)](http://badge.fury.io/rb/jekyll-typogrify)
 [![Code Climate](https://codeclimate.com/github/myles/jekyll-typogrify/badges/gpa.svg)](https://codeclimate.com/github/myles/jekyll-typogrify)
 [![Test Coverage](https://codeclimate.com/github/myles/jekyll-typogrify/badges/coverage.svg)](https://codeclimate.com/github/myles/jekyll-typogrify/coverage)
