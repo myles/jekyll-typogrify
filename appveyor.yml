@@ -2,13 +2,17 @@ version: v0.3.2-{build}-{branch}
 
 environment:
   matrix:
-    - RUBY_VERSION: 22
-    - RUBY_VERSION: 21
-    - RUBY_VERSION: 200
+    - ruby_version: 22
+    - ruby_version: 22-x64
+    - ruby_version: 21
+    - ruby_version: 21-x64
+    - ruby_version: 200
+    - ruby_version: 200-x64
 
 install:
-  - set PATH=C:\Ruby22\bin;%PATH%
-  - bundle install
+  - set PATH=C:\Ruby%ruby_version%\bin;%PATH%
+  - gem install bundler --no-document -v 1.10.5
+  - bundle install --retry=3
 
 build: off
 
