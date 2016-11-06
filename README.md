@@ -58,7 +58,7 @@ Surrounds two or more consecutive capital letters, perhaps with interspersed dig
 Converts special characters (excluding HTML tags) to HTML entities.
 
 ```html
-<p>© Myles Braithwaite</p>
+<p>{{ "© Myles Braithwaite" | entities }}</p>
 
 <p>&copy; Myles Braithwaite</p>
 ```
