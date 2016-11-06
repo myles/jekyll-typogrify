@@ -11,4 +11,4 @@ after_script:
   - bundle exec codeclimate-test-reporter
 after_success:
   - gem install package_cloud
-  - package_cloud push myles/jekyll-typogrify jekyll-typogrify-0.3.2-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH.gem
+  - package_cloud push myles/jekyll-typogrify pkg/jekyll-typogrify-0.3.2.pre.gem

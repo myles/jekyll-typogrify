@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-typogrify (0.3.1)
+    jekyll-typogrify (0.3.2.pre)
       titlecase
       typogruby
 
