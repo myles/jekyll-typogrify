@@ -11,4 +11,5 @@ after_script:
   - bundle exec codeclimate-test-reporter
 after_success:
   - gem install package_cloud
+  - bundle exec rake build
   - package_cloud push myles/jekyll-typogrify pkg/jekyll-typogrify-0.3.2.pre.gem
