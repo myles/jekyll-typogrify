@@ -9,5 +9,6 @@ script:
   - bundle exec rake
 after_script:
   - bundle exec codeclimate-test-reporter
-env:
-  - CODECLIMATE_REPO_TOKEN=8717c954cb9c11a6720098955568a6a39361a59fa2612d3854800a553af13c4e
+after_success:
+  - gem install package_cloud
+  - package_cloud push myles/jekyll-typogrify jekyll-typogrify-0.3.2-$TRAVIS_BUILD_NUMBER-$TRAVIS_BRANCH.gem
