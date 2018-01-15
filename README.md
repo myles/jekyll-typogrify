@@ -57,6 +57,17 @@ Surrounds two or more consecutive capital letters, perhaps with interspersed dig
 <h1><span class="caps">A.B.C.</span> Corp.</h1>
 ```
 
+#### Custom Capitalisation
+
+Typogruby `cap` module doesn't support having hyphens so there is a custom
+module:
+
+```html
+<h1>{{ "North American P-51 Mustang" | jt_caps }}</h1>
+
+<h1>North American <span class="caps">P-51</span> Mustang</h1>
+```
+
 ### Entities
 
 Converts special characters (excluding HTML tags) to HTML entities.
