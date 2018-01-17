@@ -6,8 +6,8 @@ require 'jekyll/typogrify/version'
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-typogrify"
   spec.version       = Jekyll::Typogrify::VERSION
-  spec.summary       = %q{A Jekyll plugin that bring the functions of typogruby.}
-  spec.description   = %q{A Jekyll plugin that bring the functions of typogruby.}
+  spec.summary       = %q{A Jekyll plugin that improves the typography of your Liquid templates.}
+  spec.description   = %q{A Jekyll plugin that improves the typography of your Liquid templates.}
   spec.license       = "MIT"
 
   spec.authors       = ["Myles Braithwaite"]

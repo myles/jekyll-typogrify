@@ -1,12 +1,12 @@
-[![Build Status](https://travis-ci.org/myles/jekyll-typogrify.svg?branch=v0.3.1)](https://travis-ci.org/myles/jekyll-typogrify)
-[![Build Status](https://ci.appveyor.com/api/projects/status/bw6g4akc9x8g1x33/branch/master?svg=true)](https://ci.appveyor.com/project/MylesBraithwaite/jekyll-typogrify/branch/v0.3.1)
+[![Build Status](https://travis-ci.org/myles/jekyll-typogrify.svg?branch=develop)](https://travis-ci.org/myles/jekyll-typogrify)
+[![Build Status](https://ci.appveyor.com/api/projects/status/bw6g4akc9x8g1x33/branch/master?svg=true)](https://ci.appveyor.com/project/MylesBraithwaite/jekyll-typogrify/branch/develop)
 [![Gem Version](https://badge.fury.io/rb/jekyll-typogrify.svg)](http://badge.fury.io/rb/jekyll-typogrify)
 [![Code Climate](https://codeclimate.com/github/myles/jekyll-typogrify/badges/gpa.svg)](https://codeclimate.com/github/myles/jekyll-typogrify)
 [![Test Coverage](https://codeclimate.com/github/myles/jekyll-typogrify/badges/coverage.svg)](https://codeclimate.com/github/myles/jekyll-typogrify/coverage)
 
 # Jekyll::Typogrify
 
-Improves typography on your Jekyll site using [typogruby](http://avdgaag.github.io/typogruby/) and [titlecase](https://github.com/samsouder/titlecase).
+Improves typography on your Jekyll site using [typogruby](http://avdgaag.github.io/typogruby/), [titlecase](https://github.com/samsouder/titlecase), and some other useful functions.
 
 | Before | After |
 | ------ | ----- |
@@ -55,6 +55,17 @@ Surrounds two or more consecutive capital letters, perhaps with interspersed dig
 <h1>{{ "A.B.C. Corp." | caps }}</h1>
 
 <h1><span class="caps">A.B.C.</span> Corp.</h1>
+```
+
+#### Custom Capitalisation
+
+Typogruby `cap` module doesn't support having hyphens so there is a custom
+module:
+
+```html
+<h1>{{ "North American P-51 Mustang" | jt_caps }}</h1>
+
+<h1>North American <span class="caps">P-51</span> Mustang</h1>
 ```
 
 ### Entities

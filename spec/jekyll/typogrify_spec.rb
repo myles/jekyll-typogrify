@@ -105,4 +105,13 @@ describe(Jekyll) do
     expect(contents).to_not match /<p class="test-letter-spacing">Click, Clint's, and Flick.<\/p>/
     expect(contents).to match /<p class="test-letter-spacing"><span class="fix-letter-spacing">Click<\/span>, <span class="fix-letter-spacing">Clint's<\/span>, and <span class="fix-letter-spacing">Flick<\/span>.<\/p>/
   end
+
+  it "test caps will not work with a hyphenated words" do
+    expect(contents).to_not match /<p class="test-hyphenated-caps">The <span class="caps">M65-A<\/span> aircraft weights 10 tons.<\/p>/
+  end
+
+  it "test jt_caps will work with a hyphenated words" do
+    expect(contents).to match /<p class="test-hyphenated-jt_caps">The <span class="caps">M65-A<\/span> aircraft weights 10 tons.<\/p>/
+    expect(contents).to_not match /<p class="test-hyphenated-jt_caps">The <span class="caps">M65<\/span>-A aircraft weights 10 tons.<\/p>/
+  end
 end
