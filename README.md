@@ -3,6 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/jekyll-typogrify.svg)](http://badge.fury.io/rb/jekyll-typogrify)
 [![Code Climate](https://codeclimate.com/github/myles/jekyll-typogrify/badges/gpa.svg)](https://codeclimate.com/github/myles/jekyll-typogrify)
 [![Test Coverage](https://codeclimate.com/github/myles/jekyll-typogrify/badges/coverage.svg)](https://codeclimate.com/github/myles/jekyll-typogrify/coverage)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmyles%2Fjekyll-typogrify.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmyles%2Fjekyll-typogrify?ref=badge_shield)
 
 # Jekyll::Typogrify
 
@@ -147,3 +148,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmyles%2Fjekyll-typogrify.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmyles%2Fjekyll-typogrify?ref=badge_large)
