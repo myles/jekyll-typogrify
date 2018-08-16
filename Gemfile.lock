@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-typogrify (0.3.4.pre)
+    jekyll-typogrify (0.3.4)
       titlecase
       typogruby
 
@@ -103,4 +103,4 @@ DEPENDENCIES
   typogruby
 
 BUNDLED WITH
-   1.16.0
+   1.16.2
