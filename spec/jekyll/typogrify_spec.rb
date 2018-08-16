@@ -114,4 +114,9 @@ describe(Jekyll) do
     expect(contents).to match /<p class="test-hyphenated-jt_caps">The <span class="caps">M65-A<\/span> aircraft weights 10 tons.<\/p>/
     expect(contents).to_not match /<p class="test-hyphenated-jt_caps">The <span class="caps">M65<\/span>-A aircraft weights 10 tons.<\/p>/
   end
+
+  it "test jt_emdash" do
+    expect(contents).to match /<p class="test-jt_emdash">And yet, when the car was finally delivered—nearly three months after it was ordered—she decided she no longer wanted it, leaving the dealer with an oddly equipped car that would be difficult to sell.<\/p>/
+    expect(contents).to_not match /<p class="test-jt_emdash">And yet, when the car was finally delivered<span class="emdash">&mdash;<\/span>nearly three months after it was ordered<span class="emdash">&mdash;<\/span>she decided she no longer wanted it, leaving the dealer with an oddly equipped car that would be difficult to sell.<\/p>/
+  end
 end

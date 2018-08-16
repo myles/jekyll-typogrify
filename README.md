@@ -138,6 +138,16 @@ Let's make sure click doesn't look like dick.
 <p>There’s more to love with every <span class="fix-letter-spacing">click</p>.</p>
 ```
 
+### Em dash
+
+Identify em dashes and surround them with a span.
+
+```html
+<p>{{ "Upon discovering the errors—all 124 of them—the publisher immediately recalled the books." | jt_emdash }}</p>
+
+<p>Upon discovering the errors<span class="emdash">&mdash;</span>all 124 of them<span class="emdash">&mdash;</span>the publisher immediately recalled the books.</p>
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.

@@ -103,6 +103,15 @@ module Jekyll
       return custom_caps(text.to_s)
     end
 
+    # converts a — (em dash) by optional whitespace or a non-breaking space
+    # to the HTML entity and surrounds it in a span with a styled class.
+    #
+    # @param [String] text input text
+    # @return [String] input text with em dashes wrapped
+    def jt_emdash(text)
+      return emdash(text.to_s)
+    end
+
     private
 
     # custom modules to jekyll-typogrify
@@ -132,6 +141,17 @@ module Jekyll
           before + '<span class="caps">' + caps + '</span>'
         end
       end
+    end
+
+    # converts a — (em dash) by optional whitespace or a non-breaking space
+    # to the HTML entity and surrounds it in a span with a styled class.
+    #
+    # @param [String] text input text
+    # @return [String] input text with em dashes wrapped
+    def emdash(text)
+      text.gsub(/(\s|&nbsp;)—(?:mdash;|#8212;)?(\s|&nbsp;)/) { |str|
+        $1 + '<span class="emdash">&mdash;</span>' + $2
+      }.gsub(/(\w+)="(.*?)<span class="emdash">&mdash;<\/span>(.*?)"/, '\1="\2&mdash;\3"')
     end
   end
 end
