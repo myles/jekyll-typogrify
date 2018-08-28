@@ -149,7 +149,7 @@ module Jekyll
     # @param [String] text input text
     # @return [String] input text with em dashes wrapped
     def emdash(text)
-      text.gsub(/(\s|&nbsp;)—(?:mdash;|#8212;)?(\s|&nbsp;)/) { |str|
+      text.gsub(/(\w|\s|&nbsp;)—(?:mdash;|#8212;)?(\w|\s|&nbsp;)/) { |str|
         $1 + '<span class="emdash">&mdash;</span>' + $2
       }.gsub(/(\w+)="(.*?)<span class="emdash">&mdash;<\/span>(.*?)"/, '\1="\2&mdash;\3"')
     end
