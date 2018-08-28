@@ -116,12 +116,12 @@ describe(Jekyll) do
   end
 
   it "test jt_emdash" do
-    expect(contents).to match /<p class="test-jt_emdash">And yet, when the car was finally delivered—nearly three months after it was ordered—she decided she no longer wanted it, leaving the dealer with an oddly equipped car that would be difficult to sell.<\/p>/
-    expect(contents).to_not match /<p class="test-jt_emdash">And yet, when the car was finally delivered<span class="emdash">&mdash;<\/span>nearly three months after it was ordered<span class="emdash">&mdash;<\/span>she decided she no longer wanted it, leaving the dealer with an oddly equipped car that would be difficult to sell.<\/p>/
+    expect(contents).to match /<p class="test-jt_emdash">And yet, when the car was finally delivered<span class="emdash">&mdash;<\/span>nearly three months after it was ordered<span class="emdash">&mdash;<\/span>she decided she no longer wanted it, leaving the dealer with an oddly equipped car that would be difficult to sell.<\/p>/
+    expect(contents).to_not match /<p class="test-jt_emdash">And yet, when the car was finally delivered—nearly three months after it was ordered—she decided she no longer wanted it, leaving the dealer with an oddly equipped car that would be difficult to sell.<\/p>/
   end
 
   it "test jt_emdash with space" do
-    expect(contents).to match /<p class="test-jt-emdash-with-space">The flight from Vancouver <span class="emdash">&mdash;<\/span> Toronto is around 4 hours and 30 minutes.<\/p>/
-    expect(contents).to_not match /<p class="test-jt-emdash-with-space">The flight from Vancouver — Toronto is around 4 hours and 30 minutes.<\/p>/
+    expect(contents).to match /<p class="test-jt-emdash-with-space">The flight Vancouver <span class="emdash">&mdash;<\/span> Toronto is around 4 hours and 30 minutes.<\/p>/
+    expect(contents).to_not match /<p class="test-jt-emdash-with-space">The flight Vancouver — Toronto is around 4 hours and 30 minutes.<\/p>/
   end
 end
