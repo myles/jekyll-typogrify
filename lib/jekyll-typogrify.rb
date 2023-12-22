@@ -1,2 +1,2 @@
-# rubocop: disable FileName
+# rubocop: disable Naming/FileName
 require "jekyll/typogrify"

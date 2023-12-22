@@ -1,12 +1,12 @@
-require 'rbconfig'
-require 'spec_helper'
+require "rbconfig"
+require "spec_helper"
 
 describe(Jekyll) do
   let(:overrides) do
     {
-      "source"      => source_dir,
+      "source" => source_dir,
       "destination" => dest_dir,
-      "url"         => "http://example.org",
+      "url" => "http://example.org",
     }
   end
 
@@ -14,16 +14,16 @@ describe(Jekyll) do
     Jekyll.configuration(overrides)
   end
 
-  let(:site)      { Jekyll::Site.new(config) }
-  let(:contents)  { File.read(dest_dir("index.html")) }
+  let(:site) { Jekyll::Site.new(config) }
+  let(:contents) { File.read(dest_dir("index.html")) }
 
   before(:each) do
     site.process
   end
 
-  is_windows = (RbConfig::CONFIG['host_os'] =~ /mswin|mingw|cygwin/)
+  is_windows = (RbConfig::CONFIG["host_os"] =~ /mswin|mingw|cygwin/)
 
-  it 'has a version number' do
+  it "has a version number" do
     expect(Jekyll::Typogrify::VERSION).not_to be nil
   end
 
@@ -66,14 +66,14 @@ describe(Jekyll) do
   end
 
   it "run improve on a couple of emojis" do
-    if not is_windows
+    unless is_windows
       expect(contents).to_not match /🤖s Fighting 🐵s/
       expect(contents).to match /🤖s Fighting&nbsp;🐵s/
     end
   end
 
   it "will apply the titlecase filter" do
-    if not is_windows
+    unless is_windows
       expect(contents).to_not match /welcome to beautiful 東京都 (tokyo), japan/
       # expect(contents).to match /Welcome to Beautiful 東京都 (Tokyo), Japan/
     end

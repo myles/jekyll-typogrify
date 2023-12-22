@@ -8,14 +8,14 @@ I love to get pull requests from everyone. By participating in this project, you
 
 Set up your machine:
 
-	./bin/setup
+	make setup
 
 Make sure the tests pass
 
-	./bin/test
+	make test
 
 Make your change. Add tests for your change. Make the tests pass:
 
-	./bin/test
+	make test
 
 Push to your fork and [submit a pull request](https://github.com/myles/jekyll-typogrify/compare/).
